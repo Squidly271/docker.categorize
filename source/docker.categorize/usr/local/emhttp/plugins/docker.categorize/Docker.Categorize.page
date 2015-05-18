@@ -1,6 +1,6 @@
 Menu="Utilities"
 Title="DockerCategory"
-Icon="docker2xml.png"
+Icon="docker.category.png"
 ---
 <?PHP
 /* Copyright 2015 Squid Software
