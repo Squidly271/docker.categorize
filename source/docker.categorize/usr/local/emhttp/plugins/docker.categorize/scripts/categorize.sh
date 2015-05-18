@@ -50,4 +50,6 @@ do
 done
 echo
 echo "Destination File: <strong>$XMLFILE</strong>"
+rm /tmp/docker.categorize.tmp
+rm /tmp/docker.categorize.tmp1
 
