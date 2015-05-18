@@ -15,6 +15,10 @@ else
 	cp $FILENAME /tmp/docker.categorize.tmp
 fi
 
+# force the last line to have a LF at the end
+
+echo "" >> /tmp/docker.categorize.tmp
+
 # Stage 1 - Search for (and remove) and existing category lines
 
 rm /tmp/docker.categorize.tmp1 > /dev/null 2>&1
@@ -31,8 +35,9 @@ do
 done
 
 # Stage 2 - Add the new categories
-
 XMLFILE="/boot/config/plugins/docker.categorize/templates/$(basename "$FILENAME" )"
+
+rm /tmp/docker.categorize.xml.flag > /dev/null 2>&1
 
 mkdir -p /boot/config/plugins/docker.categorize/templates
 
@@ -44,12 +49,20 @@ do
 	then
 		echo $LINE >> $XMLFILE
 		echo "  <Category>$CATEGORIES</Category>" >> $XMLFILE
-	else 
+		echo "" > /tmp/docker.categorize.xml.flag
+	else
 		echo $LINE >> $XMLFILE
 	fi
 done
+
+if [ ! -e /tmp/docker.categorize.xml.flag ]
+then
+	echo "Not a valid XML template"
+	exit
+fi
+
 echo
 echo "Destination File: <strong>$XMLFILE</strong>"
 rm /tmp/docker.categorize.tmp
 rm /tmp/docker.categorize.tmp1
-
+rm /tmp/docker.categorize.xml.flag > /dev/null 2>&1
