@@ -99,6 +99,6 @@ Full Path To XML Template (url or Local Path)  <strong>Any special characters in
 
 <br><br><br><bR>
 
-Line To Be Added: <a><strong> &lt;Category&gt;</a><a id="Categories"></a><a>&lt/Category&gt;</a></strong><br><br>
+Line To Be Added: <br><br><a><strong> &lt;Category&gt;</a><a id="Categories"></a><a>&lt/Category&gt;</a></strong><br><br>
 
 </form>

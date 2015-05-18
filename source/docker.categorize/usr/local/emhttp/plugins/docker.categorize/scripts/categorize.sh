@@ -45,7 +45,7 @@ rm $XMLFILE > /dev/null 2>&1
 
 cat /tmp/docker.categorize.tmp1 | while read LINE
 do
-	if [[ $LINE == "<Container>"* ]]
+	if [[ $LINE == *"<Container>"* ]]
 	then
 		echo $LINE >> $XMLFILE
 		echo "  <Category>$CATEGORIES</Category>" >> $XMLFILE
