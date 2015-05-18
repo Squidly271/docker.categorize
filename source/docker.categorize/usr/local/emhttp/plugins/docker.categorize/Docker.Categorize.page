@@ -1,0 +1,104 @@
+Menu="Utilities"
+Title="DockerCategory"
+Icon="docker2xml.png"
+---
+<?PHP
+/* Copyright 2015 Squid Software
+ */
+?>
+<?PHP
+?>
+<?$cmd = '/usr/local/emhttp/plugins/docker.categorize/scripts/categorize.sh ';?>
+
+<script>
+
+function categorize() {
+
+parameter = '';
+
+if ( document.getElementById("backup").checked ) parameter += "Backup: ";
+if (document.getElementById("beta").checked) parameter += "Beta: ";
+if (document.getElementById("cloud").checked) parameter += "Cloud: ";
+if (document.getElementById("downloaders").checked) parameter += "Downloaders: ";
+if (document.getElementById("homeautomation").checked) parameter += "HomeAutomation: ";
+if (document.getElementById("internet1").checked) parameter += "Internet:Web ";
+if (document.getElementById("internet2").checked) parameter += "Internet:DNS ";
+if (document.getElementById("internet3").checked) parameter += "Internet:FTP ";
+if (document.getElementById("internet4").checked) parameter += "Internet:Proxy ";
+if (document.getElementById("internet5").checked) parameter += "Internet:Voip ";
+if (document.getElementById("internet6").checked) parameter += "Internet:Management ";
+if (document.getElementById("internet7").checked) parameter += "Internet:Other ";
+if (document.getElementById("mediaapp1").checked) parameter += "MediaApp:Video ";
+if (document.getElementById("mediaapp2").checked) parameter += "MediaApp:Music ";
+if (document.getElementById("mediaapp3").checked) parameter += "MediaApp:Books ";
+if (document.getElementById("mediaapp4").checked) parameter += "MediaApp:Other ";
+if (document.getElementById("mediasrv1").checked) parameter += "MediaServer:Video ";
+if (document.getElementById("mediasrv2").checked) parameter += "MediaServer:Music ";
+if (document.getElementById("mediasrv3").checked) parameter += "MediaServer:Books ";
+if (document.getElementById("mediasrv4").checked) parameter += "MediaServer:Other ";
+if (document.getElementById("other").checked) parameter += "Other: ";
+if (document.getElementById("productivity").checked) parameter += "Productivity: ";
+if (document.getElementById("tools").checked) parameter += "Tools: ";
+
+parameter = parameter.substring(0,parameter.length - 1);
+
+document.getElementById("Categories").innerHTML = parameter;	
+
+}
+
+function addCategory() {
+
+command = '/usr/local/emhttp/plugins/docker.categorize/scripts/categorize.sh ' + document.getElementById("Path").value + ' ' + document.getElementById("Categories").innerHTML;
+openBox(command,'Docker Categorize',800,800);
+}
+
+</script>
+
+<form method="POST" action="/update.htm" target="progressFrame">
+
+<table>
+<tr><td><input type=checkbox id="backup" onchange=categorize();>Backup</td></tr>
+<tr><td><input type=checkbox id="beta" onchange=categorize();>Beta</td></tr>
+<tr><td><input type=checkbox id="cloud" onchange=categorize();>Cloud</td></tr>
+<tr><td><input type=checkbox id="downloaders" onchange=categorize();>Downloaders</td></tr>
+<tr><td><input type=checkbox id="homeautomation" onchange=categorize();>Home Automation</td></tr>
+<tr><td>Internet / Web / Lan </td>
+  <td><input type=checkbox id="internet1" onchange=categorize();>Web Servers</td>
+  <td><input type=checkbox id="internet2" onchange=categorize();>DNS Servers</td>
+  <td><input type=checkbox id="internet3" onchange=categorize();>FTP Clients / Servers</td>
+  <td><input type=checkbox id="internet4" onchange=categorize();>Proxies</td>
+  <td><input type=checkbox id="internet5" onchange=categorize();>VOIP</td>
+  <td><input type=checkbox id="internet6" onchange=categorize();>Management / Analysers</td>
+  <td><input type=checkbox id="internet7" onchange=categorize();>Other</td>
+</tr>
+<tr><td>Media Applications</td>
+  <td><input type=checkbox id="mediaapp1" onchange=categorize();>Video</td>
+  <td><input type=checkbox id="mediaapp2" onchange=categorize();>Music</td>
+  <td><input type=checkbox id="mediaapp3" onchange=categorize();>Books / Comics / etc</td>
+  <td><input type=checkbox id="mediaapp4" onchange=categorize();>Other</td>
+</tr>
+<tr><td>Media Servers</td>
+  <td><input type=checkbox id="mediasrv1" onchange=categorize();>Video</td>
+  <td><input type=checkbox id="mediasrv2" onchange=categorize();>Music</td>
+  <td><input type=checkbox id="mediasrv3" onchange=categorize();>Books / Comics / etc</td>
+  <td><input type=checkbox id="mediasrv4" onchange=categorize();>Other</td>
+</tr>
+<tr><td><input type=checkbox id="other" onchange=categorize();>Other</td></tr>
+<tr><td><input type=checkbox id="productivity" onchange=categorize();>Productivity</td></tr>
+<tr><td><input type=checkbox id="tools" onchange=categorize();>Tools / Utilities</td></tr>
+</table>
+
+Full Path To XML Template (url or Local Path)  <strong>Any special characters including Spaces MUST be escaped </strong>
+: <input id="Path" type="text" maxlength="500" value="">
+
+<input type="button" name="submit_button" value="Categorize" onclick='addCategory();'>
+
+
+<button type="button" onclick="done()">DONE</button>
+
+
+<br><br><br><bR>
+
+Line To Be Added: <a><strong> &lt;Category&gt;</a><a id="Categories"></a><a>&lt/Category&gt;</a></strong><br><br>
+
+</form>
