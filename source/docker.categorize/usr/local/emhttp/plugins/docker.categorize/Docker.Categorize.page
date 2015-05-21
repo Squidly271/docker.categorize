@@ -21,21 +21,23 @@ if (document.getElementById("beta").checked) parameter += "Beta: ";
 if (document.getElementById("cloud").checked) parameter += "Cloud: ";
 if (document.getElementById("downloaders").checked) parameter += "Downloaders: ";
 if (document.getElementById("homeautomation").checked) parameter += "HomeAutomation: ";
-if (document.getElementById("internet1").checked) parameter += "Internet:Web ";
-if (document.getElementById("internet2").checked) parameter += "Internet:DNS ";
-if (document.getElementById("internet3").checked) parameter += "Internet:FTP ";
-if (document.getElementById("internet4").checked) parameter += "Internet:Proxy ";
-if (document.getElementById("internet5").checked) parameter += "Internet:Voip ";
-if (document.getElementById("internet6").checked) parameter += "Internet:Management ";
-if (document.getElementById("internet7").checked) parameter += "Internet:Other ";
+if (document.getElementById("network1").checked) parameter += "Network:Web ";
+if (document.getElementById("network2").checked) parameter += "Network:DNS ";
+if (document.getElementById("network3").checked) parameter += "Network:FTP ";
+if (document.getElementById("network4").checked) parameter += "Network:Proxy ";
+if (document.getElementById("network5").checked) parameter += "Network:Voip ";
+if (document.getElementById("network6").checked) parameter += "Network:Management ";
+if (document.getElementById("network7").checked) parameter += "Network:Other ";
 if (document.getElementById("mediaapp1").checked) parameter += "MediaApp:Video ";
 if (document.getElementById("mediaapp2").checked) parameter += "MediaApp:Music ";
 if (document.getElementById("mediaapp3").checked) parameter += "MediaApp:Books ";
-if (document.getElementById("mediaapp4").checked) parameter += "MediaApp:Other ";
+if (document.getElementById("mediaapp4").checked) parameter += "MediaApp:Photos ";
+if (document.getElementById("mediaapp5").checked) parameter += "MediaApp:Other ";
 if (document.getElementById("mediasrv1").checked) parameter += "MediaServer:Video ";
 if (document.getElementById("mediasrv2").checked) parameter += "MediaServer:Music ";
 if (document.getElementById("mediasrv3").checked) parameter += "MediaServer:Books ";
-if (document.getElementById("mediasrv4").checked) parameter += "MediaServer:Other ";
+if (document.getElementById("mediasrv4").checked) parameter += "MediaServer:Photos ";
+if (document.getElementById("mediasrv5").checked) parameter += "MediaServer:Other ";
 if (document.getElementById("other").checked) parameter += "Other: ";
 if (document.getElementById("productivity").checked) parameter += "Productivity: ";
 if (document.getElementById("tools").checked) parameter += "Tools: ";
@@ -62,26 +64,28 @@ openBox(command,'Docker Categorize',800,800);
 <tr><td><input type=checkbox id="cloud" onchange=categorize();>Cloud</td></tr>
 <tr><td><input type=checkbox id="downloaders" onchange=categorize();>Downloaders</td></tr>
 <tr><td><input type=checkbox id="homeautomation" onchange=categorize();>Home Automation</td></tr>
-<tr><td>Internet / Web / Lan </td>
-  <td><input type=checkbox id="internet1" onchange=categorize();>Web Servers</td>
-  <td><input type=checkbox id="internet2" onchange=categorize();>DNS Servers</td>
-  <td><input type=checkbox id="internet3" onchange=categorize();>FTP Clients / Servers</td>
-  <td><input type=checkbox id="internet4" onchange=categorize();>Proxies</td>
-  <td><input type=checkbox id="internet5" onchange=categorize();>VOIP</td>
-  <td><input type=checkbox id="internet6" onchange=categorize();>Management / Analysers</td>
-  <td><input type=checkbox id="internet7" onchange=categorize();>Other</td>
+<tr><td>Network Services</td>
+  <td><input type=checkbox id="network1" onchange=categorize();>Web Servers</td>
+  <td><input type=checkbox id="network2" onchange=categorize();>DNS Servers</td>
+  <td><input type=checkbox id="network3" onchange=categorize();>FTP Clients / Servers</td>
+  <td><input type=checkbox id="network4" onchange=categorize();>Proxies</td>
+  <td><input type=checkbox id="network5" onchange=categorize();>VOIP</td>
+  <td><input type=checkbox id="network6" onchange=categorize();>Management / Analysers</td>
+  <td><input type=checkbox id="network7" onchange=categorize();>Other</td>
 </tr>
 <tr><td>Media Applications</td>
   <td><input type=checkbox id="mediaapp1" onchange=categorize();>Video</td>
   <td><input type=checkbox id="mediaapp2" onchange=categorize();>Music</td>
   <td><input type=checkbox id="mediaapp3" onchange=categorize();>Books / Comics / etc</td>
-  <td><input type=checkbox id="mediaapp4" onchange=categorize();>Other</td>
+  <td><input type=checkbox id="mediaapp4" onchange=categorize();>Photos
+  <td><input type=checkbox id="mediaapp5" onchange=categorize();>Other</td>
 </tr>
 <tr><td>Media Servers</td>
   <td><input type=checkbox id="mediasrv1" onchange=categorize();>Video</td>
   <td><input type=checkbox id="mediasrv2" onchange=categorize();>Music</td>
   <td><input type=checkbox id="mediasrv3" onchange=categorize();>Books / Comics / etc</td>
-  <td><input type=checkbox id="mediasrv4" onchange=categorize();>Other</td>
+  <td><input type=checkbox id="mediasrv4" onchange=categorize();>Photos
+  <td><input type=checkbox id="mediasrv5" onchange=categorize();>Other</td>
 </tr>
 <tr><td><input type=checkbox id="other" onchange=categorize();>Other</td></tr>
 <tr><td><input type=checkbox id="productivity" onchange=categorize();>Productivity</td></tr>
