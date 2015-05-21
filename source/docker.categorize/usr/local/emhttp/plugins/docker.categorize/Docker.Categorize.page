@@ -17,7 +17,7 @@ function categorize() {
 parameter = '';
 
 if ( document.getElementById("backup").checked ) parameter += "Backup: ";
-if (document.getElementById("beta").checked) parameter += "Beta: ";
+if (document.getElementById("beta").checked) document.getElementById("Beta").innerHTML="True"; else document.getElementById("Beta").innerHTML="False";
 if (document.getElementById("cloud").checked) parameter += "Cloud: ";
 if (document.getElementById("downloaders").checked) parameter += "Downloaders: ";
 if (document.getElementById("homeautomation").checked) parameter += "HomeAutomation: ";
@@ -103,6 +103,10 @@ Full Path To XML Template (url or Local Path)  <strong>Any special characters in
 
 <br><br><br><bR>
 
-Line To Be Added: <br><br><a><strong> &lt;Category&gt;</a><a id="Categories"></a><a>&lt/Category&gt;</a></strong><br><br>
+Lines To Be Added: 
+
+<br><br>
+
+<a><strong>&lt;Beta&gt;</a><a id="Beta">False</a><a>&lt/Beta&gt;</a></strong><br> <a><strong>&lt;Category&gt;</a><a id="Categories"></a><a>&lt/Category&gt;</a></strong><br><br>
 
 </form>
