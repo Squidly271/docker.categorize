@@ -2,8 +2,11 @@
 
 FILENAME=$1
 shift
+BETA=$1
+shift
 CATEGORIES=$@
 echo "Source File: <strong>$FILENAME</strong>"
+echo "Beta: <strong>$BETA</strong>"
 echo "Categories: <strong>$CATEGORIES</strong>"
 
 # Copy the template to a temp file
@@ -29,6 +32,10 @@ do
 	if [[ $LINE == *"<Category>"* ]]
 	then
 		continue
+	fi
+	if [[ $LINE == *"<Beta>"* ]]
+	then
+		continue
 	else
 		echo $LINE >> /tmp/docker.categorize.tmp1
 	fi
@@ -48,6 +55,7 @@ do
 	if [[ $LINE == *"<Container>"* ]]
 	then
 		echo $LINE >> $XMLFILE
+		echo "  <Beta>$BETA</Beta>" >> $XMLFILE
 		echo "  <Category>$CATEGORIES</Category>" >> $XMLFILE
 		echo "" > /tmp/docker.categorize.xml.flag
 	else

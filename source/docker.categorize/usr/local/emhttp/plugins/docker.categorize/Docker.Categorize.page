@@ -50,7 +50,7 @@ document.getElementById("Categories").innerHTML = parameter;
 
 function addCategory() {
 
-command = '/usr/local/emhttp/plugins/docker.categorize/scripts/categorize.sh ' + document.getElementById("Path").value + ' ' + document.getElementById("Categories").innerHTML;
+command = '/usr/local/emhttp/plugins/docker.categorize/scripts/categorize.sh ' + document.getElementById("Path").value + ' ' + document.getElementById("Beta").innerHTML + ' ' + document.getElementById("Categories").innerHTML;
 openBox(command,'Docker Categorize',800,800);
 }
 
