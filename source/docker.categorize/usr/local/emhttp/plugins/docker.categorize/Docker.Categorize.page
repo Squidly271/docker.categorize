@@ -49,6 +49,38 @@ document.getElementById("Categories").innerHTML = parameter;
 
 }
 
+function clearCategory() {
+document.getElementById("backup").checked = false;
+document.getElementById("beta").checked = false;
+document.getElementById("cloud").checked = false;
+document.getElementById("downloaders").checked = false;
+document.getElementById("homeautomation").checked = false;
+document.getElementById("network1").checked = false;
+document.getElementById("network2").checked = false;
+document.getElementById("network3").checked = false;
+document.getElementById("network4").checked = false;
+document.getElementById("network5").checked = false;
+document.getElementById("network6").checked = false;
+document.getElementById("network7").checked = false;
+document.getElementById("network8").checked = false;
+document.getElementById("mediaapp1").checked = false;
+document.getElementById("mediaapp2").checked = false;
+document.getElementById("mediaapp3").checked = false;
+document.getElementById("mediaapp4").checked = false;
+document.getElementById("mediaapp5").checked = false;
+document.getElementById("mediasrv1").checked = false;
+document.getElementById("mediasrv2").checked = false;
+document.getElementById("mediasrv3").checked = false;
+document.getElementById("mediasrv4").checked = false;
+document.getElementById("mediasrv5").checked = false;
+document.getElementById("other").checked = false;
+document.getElementById("productivity").checked = false;
+document.getElementById("tools").checked = false;
+
+categorize();
+
+}
+
 function addCategory() {
 
 command = '/usr/local/emhttp/plugins/docker.categorize/scripts/categorize.sh ' + document.getElementById("Path").value + ' ' + document.getElementById("Beta").innerHTML + ' ' + document.getElementById("Categories").innerHTML;
@@ -101,8 +133,7 @@ Full Path To XML Template (url or Local Path)  <strong>Any special characters in
 
 
 <button type="button" onclick="done()">DONE</button>
-
-
+<button type="button" onclick="clearCategory();">CLEAR</button>
 <br><br><br><bR>
 
 Lines To Be Added: 
