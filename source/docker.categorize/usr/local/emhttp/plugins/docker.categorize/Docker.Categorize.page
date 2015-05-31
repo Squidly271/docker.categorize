@@ -99,7 +99,7 @@ openBox(command,'Docker Categorize',800,800);
 <tr><td><input type=checkbox id="homeautomation" onchange=categorize();>Home Automation</td></tr>
 <tr><td>Network Services</td>
   <td><input type=checkbox id="network1" onchange=categorize();>Web Servers</td>
-  <td><input type=checkbox id="network2" onchange=categorize();>DNS Servers</td>
+  <td><input type=checkbox id="network2" onchange=categorize();>DNS Client / Servers</td>
   <td><input type=checkbox id="network3" onchange=categorize();>FTP Clients / Servers</td>
   <td><input type=checkbox id="network4" onchange=categorize();>Proxies</td>
   <td><input type=checkbox id="network5" onchange=categorize();>VOIP</td>

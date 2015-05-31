@@ -2,7 +2,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "docker.categorize">
 <!ENTITY author    "Squid">
-<!ENTITY version   "2015.05.30">
+<!ENTITY version   "2015.05.31">
 <!ENTITY launch    "Docker.Categorize">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "Squidly271/docker.categorize">
@@ -12,7 +12,10 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
-####2015.04.30###
+###2015.04.31###
+- Renamed DNS Servers to be DNS Clients / Servers
+
+###2015.04.30###
 - Add Clear Categories button
 
 ###2015.04.24###
