@@ -12,6 +12,9 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
+###2015.06.08###
+- Add in Date section
+
 ###2015.04.31###
 - Renamed DNS Servers to be DNS Clients / Servers
 
