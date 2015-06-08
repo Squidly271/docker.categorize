@@ -2,10 +2,13 @@
 
 FILENAME=$1
 shift
+DATE=$1
+shift
 BETA=$1
 shift
 CATEGORIES=$@
 echo "Source File: <strong>$FILENAME</strong>"
+echo "Date: <strong>$DATE</strong>"
 echo "Beta: <strong>$BETA</strong>"
 echo "Categories: <strong>$CATEGORIES</strong>"
 
@@ -57,6 +60,7 @@ do
 		echo $LINE >> $XMLFILE
 		echo "  <Beta>$BETA</Beta>" >> $XMLFILE
 		echo "  <Category>$CATEGORIES</Category>" >> $XMLFILE
+		echo "  <Date>$DATE</Date>" >> $XMLFILE
 		echo "" > /tmp/docker.categorize.xml.flag
 	else
 		echo $LINE >> $XMLFILE

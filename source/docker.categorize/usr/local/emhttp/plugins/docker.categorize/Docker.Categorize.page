@@ -12,6 +12,19 @@ Icon="docker.categorize.png"
 
 <script>
 
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+
+    return [year, month, day].join('-');
+}
+
+
 function categorize() {
 
 parameter = '';
@@ -46,6 +59,11 @@ if (document.getElementById("tools").checked) parameter += "Tools: ";
 parameter = parameter.substring(0,parameter.length - 1);
 
 document.getElementById("Categories").innerHTML = parameter;	
+
+
+var d = new Date();
+d = formatDate(d);
+document.getElementById("Date").innerHTML = d;
 
 }
 
@@ -83,7 +101,7 @@ categorize();
 
 function addCategory() {
 
-command = '/usr/local/emhttp/plugins/docker.categorize/scripts/categorize.sh ' + document.getElementById("Path").value + ' ' + document.getElementById("Beta").innerHTML + ' ' + document.getElementById("Categories").innerHTML;
+command = '/usr/local/emhttp/plugins/docker.categorize/scripts/categorize.sh ' + document.getElementById("Path").value + ' ' + document.getElementById("Date").innerHTML + ' ' + document.getElementById("Beta").innerHTML + ' ' + document.getElementById("Categories").innerHTML;
 openBox(command,'Docker Categorize',800,800);
 }
 
@@ -140,6 +158,7 @@ Lines To Be Added:
 
 <br><br>
 
-<a><strong>&lt;Beta&gt;</a><a id="Beta">False</a><a>&lt/Beta&gt;</a></strong><br> <a><strong>&lt;Category&gt;</a><a id="Categories"></a><a>&lt/Category&gt;</a></strong><br><br>
+<a><strong>&lt;Beta&gt;</a><a id="Beta">False</a><a>&lt/Beta&gt;</a></strong><br> <a><strong>&lt;Category&gt;</a><a id="Categories"></a><a>&lt/Category&gt;</a></strong><br>
+<a><strong>&lt;Date&gt;</a><a id="Date"></a><a>&lt;/Date&gt;</a></strong>
 
 </form>
