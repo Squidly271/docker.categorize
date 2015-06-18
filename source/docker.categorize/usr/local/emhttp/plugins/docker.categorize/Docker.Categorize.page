@@ -154,11 +154,13 @@ Full Path To XML Template (url or Local Path)  <strong>Any special characters in
 <button type="button" onclick="clearCategory();">CLEAR</button>
 <br><br><br><bR>
 
-Lines To Be Added: 
+Lines To Be Added *: 
 
 <br><br>
 
 <a><strong>&lt;Beta&gt;</a><a id="Beta">False</a><a>&lt/Beta&gt;</a></strong><br> <a><strong>&lt;Category&gt;</a><a id="Categories"></a><a>&lt/Category&gt;</a></strong><br>
 <a><strong>&lt;Date&gt;</a><a id="Date"></a><a>&lt;/Date&gt;</a></strong>
 
+
+<br><br>* You can also add a <a><strong>&lt;Changes&gt;</strong></a> section to your template.  Details <a href='http://lime-technology.com/forum/index.php?topic=40111.msg379576#msg379576' target='_blank'>HERE</a>
 </form>

@@ -12,6 +12,9 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
+###2015.06.18###
+- Added in reminder to add optional Changes section
+
 ###2015.06.08###
 - Add in Date section
 
@@ -44,7 +47,7 @@ The 'source' file.
 -->
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="upgradepkg --install-new">
 <URL>https://raw.github.com/&github;/master/archive/&name;-&version;.txz</URL>
-<MD5>4a2cf045f7dd67aac64c255652b354d1</MD5>
+<MD5>c6ec15bd488bdc922fa2b79844d7372c</MD5>
 </FILE>
 
 <!--
