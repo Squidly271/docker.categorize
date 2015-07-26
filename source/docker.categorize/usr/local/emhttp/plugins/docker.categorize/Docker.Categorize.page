@@ -5,10 +5,15 @@ Icon="docker.categorize.png"
 <?PHP
 /* Copyright 2015 Squid Software
  */
+$unraid = parse_ini_file("/etc/unraid-version");
+
+$execPath = "docker.categorize/";
+if ( strcmp( $unraid['version'], "6.1-rc-2" ) < 0 ) {
+  $execPath = "/usr/local/sbin/docker.categorize/";
+}
+$cmd = 'categorize.sh ';
+
 ?>
-<?PHP
-?>
-<?$cmd = '/usr/local/emhttp/plugins/docker.categorize/scripts/categorize.sh ';?>
 
 <script>
 
@@ -101,7 +106,7 @@ categorize();
 
 function addCategory() {
 
-command = '/usr/local/emhttp/plugins/docker.categorize/scripts/categorize.sh ' + document.getElementById("Path").value + ' ' + document.getElementById("Date").innerHTML + ' ' + document.getElementById("Beta").innerHTML + ' ' + document.getElementById("Categories").innerHTML;
+command = '<?=$execPath?>categorize.sh ' + document.getElementById("Path").value + ' ' + document.getElementById("Date").innerHTML + ' ' + document.getElementById("Beta").innerHTML + ' ' + document.getElementById("Categories").innerHTML;
 openBox(command,'Docker Categorize',800,800);
 }
 

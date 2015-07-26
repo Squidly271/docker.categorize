@@ -2,7 +2,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "docker.categorize">
 <!ENTITY author    "Squid">
-<!ENTITY version   "2015.06.18">
+<!ENTITY version   "2015.07.26">
 <!ENTITY launch    "Docker.Categorize">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "Squidly271/docker.categorize">
@@ -12,6 +12,9 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
+###2015.07.26###
+- 6.1 RC2 Hotfix
+
 ###2015.06.18###
 - Added in reminder to add optional Changes section
 
@@ -47,7 +50,7 @@ The 'source' file.
 -->
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="upgradepkg --install-new">
 <URL>https://raw.github.com/&github;/master/archive/&name;-&version;.txz</URL>
-<MD5>c6ec15bd488bdc922fa2b79844d7372c</MD5>
+<MD5>018a85265283a561bffdbe475f3ed4d3</MD5>
 </FILE>
 
 <!--
