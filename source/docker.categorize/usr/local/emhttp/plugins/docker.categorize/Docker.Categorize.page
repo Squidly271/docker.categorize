@@ -6,11 +6,23 @@ Icon="docker.categorize.png"
 /* Copyright 2015 Squid Software
  */
 $unraid = parse_ini_file("/etc/unraid-version");
+$plugin = "docker.categorize";
 
-$execPath = "docker.categorize/";
-if ( strcmp( $unraid['version'], "6.1-rc-2" ) < 0 ) {
-  $execPath = "/usr/local/sbin/docker.categorize/";
+$execPath = "/plugins/$plugin/scripts";
+
+if ( $unraid['version'] == "6.1-rc2" ) {
+  $execPath = "$plugin/scripts";
+  exec("mkdir -p /usr/local/sbin/$plugin/scripts");
+  exec("cp /usr/local/emhttp/plugins/$plugin/scripts/* /usr/local/sbin/$plugin/scripts/");
 }
+
+if ( $unraid['version'] == "6.0.1" || $unraid['version'] == "6.1-rc1" || $unraid['version'] == "6.0") {
+  $execPath = "/usr/local/emhttp/plugins/$plugin/scripts";
+}
+
+
+
+
 $cmd = 'categorize.sh ';
 
 ?>
@@ -106,7 +118,7 @@ categorize();
 
 function addCategory() {
 
-command = '<?=$execPath?>categorize.sh ' + document.getElementById("Path").value + ' ' + document.getElementById("Date").innerHTML + ' ' + document.getElementById("Beta").innerHTML + ' ' + document.getElementById("Categories").innerHTML;
+command = '<?=$execPath?>/categorize.sh ' + document.getElementById("Path").value + ' ' + document.getElementById("Date").innerHTML + ' ' + document.getElementById("Beta").innerHTML + ' ' + document.getElementById("Categories").innerHTML;
 openBox(command,'Docker Categorize',800,800);
 }
 
