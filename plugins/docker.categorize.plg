@@ -2,7 +2,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "docker.categorize">
 <!ENTITY author    "Squid">
-<!ENTITY version   "2015.08.18">
+<!ENTITY version   "2015.08.25">
 <!ENTITY launch    "Docker.Categorize">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "Squidly271/docker.categorize">
@@ -12,6 +12,10 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
+###2015.08.25###
+- Remove option for automatically adding lines to templates (easier to copy / paste)
+- Full 6.1RC6 compliance
+
 ###2015.08.18###
 - Full compatibility with 6.1 security
 
@@ -53,7 +57,7 @@ The 'source' file.
 -->
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="upgradepkg --install-new">
 <URL>https://raw.github.com/&github;/master/archive/&name;-&version;.txz</URL>
-<MD5>009f322b3d379ac7a0c3145e4e1afd4a</MD5>
+<MD5>7f9256313b6a81b8075a25b12361f48a</MD5>
 </FILE>
 
 <!--

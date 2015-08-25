@@ -161,22 +161,15 @@ openBox(command,'Docker Categorize',800,800);
 <tr><td><input type=checkbox id="tools" onchange=categorize();>Tools / Utilities</td></tr>
 </table>
 
-Full Path To XML Template (url or Local Path)  <strong>Any special characters including Spaces MUST be escaped </strong>
-: <input id="Path" type="text" maxlength="500" value="">
-
-<input type="button" name="submit_button" value="Categorize" onclick='addCategory();'>
-
 
 <button type="button" onclick="done()">DONE</button>
 <button type="button" onclick="clearCategory();">CLEAR</button>
-<br><br><br><bR>
-
-Lines To Be Added *: 
-
 <br><br>
 
-<a><strong>&lt;Beta&gt;</a><a id="Beta">False</a><a>&lt/Beta&gt;</a></strong><br> <a><strong>&lt;Category&gt;</a><a id="Categories"></a><a>&lt/Category&gt;</a></strong><br>
-<a><strong>&lt;Date&gt;</a><a id="Date"></a><a>&lt;/Date&gt;</a></strong>
+<font size="3">Copy and paste these lines to your XML template</font> 
+<br><br>
+<font size="2"><a><strong>&lt;Beta&gt;</a><a id="Beta">False</a><a>&lt/Beta&gt;</a></strong><br> <a><strong>&lt;Category&gt;</a><a id="Categories"></a><a>&lt/Category&gt;</a></strong><br>
+<a><strong>&lt;Date&gt;</a><a id="Date"></a><a>&lt;/Date&gt;</a></strong></font>
 
 
 <br><br>* You can also add a <a><strong>&lt;Changes&gt;</strong></a> section to your template.  Details <a href='http://lime-technology.com/forum/index.php?topic=40111.msg379576#msg379576' target='_blank'>HERE</a>
