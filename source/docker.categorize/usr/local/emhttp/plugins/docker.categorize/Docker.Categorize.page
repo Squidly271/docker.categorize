@@ -72,6 +72,7 @@ if (document.getElementById("mediasrv5").checked) parameter += "MediaServer:Othe
 if (document.getElementById("other").checked) parameter += "Other: ";
 if (document.getElementById("productivity").checked) parameter += "Productivity: ";
 if (document.getElementById("tools").checked) parameter += "Tools: ";
+if (document.getElementById("tools1").checked) parameter += "Tools:System ";
 
 parameter = parameter.substring(0,parameter.length - 1);
 
@@ -158,9 +159,10 @@ openBox(command,'Docker Categorize',800,800);
 </tr>
 <tr><td><input type=checkbox id="other" onchange=categorize();>Other</td></tr>
 <tr><td><input type=checkbox id="productivity" onchange=categorize();>Productivity</td></tr>
-<tr><td><input type=checkbox id="tools" onchange=categorize();>Tools / Utilities</td></tr>
+<tr><td><input type=checkbox id="tools" onchange=categorize();>Tools / Utilities</td>
+<td><input type=checkbox id="tools1" onchange=categorize();>System Utilities **</td></tr>
 </table>
-
+** System Utilities is for apps which affect the operation of unRaid itself (ie: dynamix plugins, etc)<br><br>
 
 <button type="button" onclick="done()">DONE</button>
 <button type="button" onclick="clearCategory();">CLEAR</button>
