@@ -1,3 +1,3 @@
-Docker Categorizer
+####Application Categorizer####
 
-A plugin to assist repository maintainers to add / remove categories from containers
+A plugin to assist repository maintainers to add / remove categories from docker / plugin applications

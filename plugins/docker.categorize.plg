@@ -2,7 +2,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "docker.categorize">
 <!ENTITY author    "Squid">
-<!ENTITY version   "2015.12.05">
+<!ENTITY version   "2016.07.22">
 <!ENTITY launch    "Docker.Categorize">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "Squidly271/docker.categorize">
@@ -12,6 +12,9 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
+###2016.07.22###
+- Formatting changes as per CHBMB's OCD
+
 ###2015.08.25###
 - Remove option for automatically adding lines to templates (easier to copy / paste)
 - Full 6.1RC6 compliance
@@ -57,7 +60,7 @@ The 'source' file.
 -->
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="upgradepkg --install-new">
 <URL>https://raw.github.com/&github;/master/archive/&name;-&version;.txz</URL>
-<MD5>be64728d7e6ffcfc3ea5c7f43579d5e1</MD5>
+<MD5>569160a1895e9d42d5694af164ee9695</MD5>
 </FILE>
 
 <!--
