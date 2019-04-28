@@ -50,6 +50,7 @@ if ( document.getElementById("backup").checked ) parameter += "Backup: ";
 if (document.getElementById("beta").checked) document.getElementById("Beta").innerHTML="True"; else document.getElementById("Beta").innerHTML="False";
 if (document.getElementById("cloud").checked) parameter += "Cloud: ";
 if (document.getElementById("downloaders").checked) parameter += "Downloaders: ";
+if (document.getElementById("gameservers").checked) parameter += "GameServers: ";
 if (document.getElementById("homeautomation").checked) parameter += "HomeAutomation: ";
 if (document.getElementById("network1").checked) parameter += "Network:Web ";
 if (document.getElementById("network2").checked) parameter += "Network:DNS ";
@@ -90,6 +91,7 @@ document.getElementById("backup").checked = false;
 document.getElementById("beta").checked = false;
 document.getElementById("cloud").checked = false;
 document.getElementById("downloaders").checked = false;
+document.getElementById("gameservers").checked = false;
 document.getElementById("homeautomation").checked = false;
 document.getElementById("network1").checked = false;
 document.getElementById("network2").checked = false;
@@ -132,6 +134,7 @@ openBox(command,'Docker Categorize',800,800);
 <tr><td><input type=checkbox id="beta" onchange=categorize();>Beta</td></tr>
 <tr><td><input type=checkbox id="cloud" onchange=categorize();>Cloud</td></tr>
 <tr><td><input type=checkbox id="downloaders" onchange=categorize();>Downloaders</td></tr>
+<tr><td><input type=checkbox id='gameservers' onchange=categorize();>GameServers</td></tr>
 <tr><td><input type=checkbox id="homeautomation" onchange=categorize();>Home Automation</td></tr>
 <tr><td>Network Services</td>
   <td><input type=checkbox id="network1" onchange=categorize();>Web Servers</td>
