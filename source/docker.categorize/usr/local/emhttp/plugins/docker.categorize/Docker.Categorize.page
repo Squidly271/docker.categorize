@@ -1,5 +1,5 @@
 Menu="Utilities"
-Title="DockerCategorize"
+Title="Application Categorizer"
 Icon="list-alt"
 ---
 <?PHP
@@ -79,6 +79,8 @@ if (document.getElementById("other").checked) parameter += "Other: ";
 if (document.getElementById("productivity").checked) parameter += "Productivity: ";
 if (document.getElementById("tools").checked) parameter += "Tools: ";
 if (document.getElementById("tools1").checked) parameter += "Tools:System ";
+if (document.getElementById("tools2").checked) parameter += "Tools:Themes ";
+
 
 parameter = parameter.substring(0,parameter.length - 1);
 
@@ -168,7 +170,8 @@ openBox(command,'Docker Categorize',800,800);
 <tr><td><input type=checkbox id="other" onchange=categorize();>Other</td></tr>
 <tr><td><input type=checkbox id="productivity" onchange=categorize();>Productivity</td></tr>
 <tr><td><input type=checkbox id="tools" onchange=categorize();>Tools / Utilities</td>
-<td><input type=checkbox id="tools1" onchange=categorize();>System Utilities **</td></tr>
+<td><input type=checkbox id="tools1" onchange=categorize();>System Utilities **</td>
+<td><input type=checkbox id='tools2' onchange=categorize();>Themes</td></tr>
 </table>
 ** System Utilities is for apps which affect the operation of unRaid itself (ie: dynamix plugins, etc)<br><br>
 

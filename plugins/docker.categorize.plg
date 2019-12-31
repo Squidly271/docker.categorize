@@ -2,7 +2,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "docker.categorize">
 <!ENTITY author    "Squid">
-<!ENTITY version   "2019.04.29">
+<!ENTITY version   "2019.12.31">
 <!ENTITY launch    "Docker.Categorize">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "Squidly271/docker.categorize">
@@ -12,6 +12,9 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" icon="list-alt">
 
 <CHANGES>
+###2019.12.31
+- Add in Themes as a tools subcategory
+
 ###2019.04.28
 - Add in Game Servers as a category
 
@@ -66,7 +69,7 @@ The 'source' file.
 -->
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="upgradepkg --install-new">
 <URL>https://raw.github.com/&github;/master/archive/&name;-&version;.txz</URL>
-<MD5>e664d6b653ea826c977fac00818fb537</MD5>
+<MD5>44c43a714690211f30530191191d90f0</MD5>
 </FILE>
 
 <!--
