@@ -1,8 +1,8 @@
 <?xml version='1.0' standalone='yes'?>
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "docker.categorize">
-<!ENTITY author    "Squid">
-<!ENTITY version   "2019.12.31">
+<!ENTITY author    "Andrew Zawadzki">
+<!ENTITY version   "2020.01.16">
 <!ENTITY launch    "Docker.Categorize">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "Squidly271/docker.categorize">
@@ -12,6 +12,9 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" icon="list-alt">
 
 <CHANGES>
+###2020.01.16
+- Add in VPN as a network category
+
 ###2019.12.31
 - Add in Themes as a tools subcategory
 
@@ -69,7 +72,7 @@ The 'source' file.
 -->
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="upgradepkg --install-new">
 <URL>https://raw.github.com/&github;/master/archive/&name;-&version;.txz</URL>
-<MD5>44c43a714690211f30530191191d90f0</MD5>
+<MD5>b41556742227ad77ae9a2e4b54f3d8f1</MD5>
 </FILE>
 
 <!--
@@ -80,7 +83,7 @@ The 'post-install' script
 echo ""
 echo "----------------------------------------------------"
 echo " &name; has been installed."
-echo " Copyright 2015, Squid Software"
+echo " Copyright 2015-2020, Andrew Zawadzki Software"
 echo " Version: &version;"
 echo "----------------------------------------------------"
 echo ""

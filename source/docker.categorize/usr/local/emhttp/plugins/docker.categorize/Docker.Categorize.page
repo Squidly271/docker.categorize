@@ -65,6 +65,7 @@ if (document.getElementById("network5").checked) parameter += "Network:Voip ";
 if (document.getElementById("network6").checked) parameter += "Network:Management ";
 if (document.getElementById("network7").checked) parameter += "Network:Other ";
 if (document.getElementById("network8").checked) parameter += "Network:Messenger ";
+if (document.getElementById("network9").checked) parameter += "Network:VPN ";
 if (document.getElementById("mediaapp1").checked) parameter += "MediaApp:Video ";
 if (document.getElementById("mediaapp2").checked) parameter += "MediaApp:Music ";
 if (document.getElementById("mediaapp3").checked) parameter += "MediaApp:Books ";
@@ -108,6 +109,7 @@ document.getElementById("network5").checked = false;
 document.getElementById("network6").checked = false;
 document.getElementById("network7").checked = false;
 document.getElementById("network8").checked = false;
+document.getElementById("network9").checked = false;
 document.getElementById("mediaapp1").checked = false;
 document.getElementById("mediaapp2").checked = false;
 document.getElementById("mediaapp3").checked = false;
@@ -121,7 +123,8 @@ document.getElementById("mediasrv5").checked = false;
 document.getElementById("other").checked = false;
 document.getElementById("productivity").checked = false;
 document.getElementById("tools").checked = false;
-
+document.getElementById("tools1").checked = false;
+document.getElementById("tools2").checked = false;
 categorize();
 
 }
@@ -151,6 +154,7 @@ openBox(command,'Docker Categorize',800,800);
   <td><input type=checkbox id="network5" onchange=categorize();>VOIP</td>
   <td><input type=checkbox id="network6" onchange=categorize();>Management / Analysers</td>
   <td><input type=checkbox id="network8" onchange=categorize();>Messengers (IRC, etc)</td>
+	<td><input type=checkbox id="network9" onchange=categorize();>VPN</td>
   <td><input type=checkbox id="network7" onchange=categorize();>Other</td>
 </tr>
 <tr><td>Media Applications</td>
