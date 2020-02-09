@@ -2,7 +2,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "docker.categorize">
 <!ENTITY author    "Andrew Zawadzki">
-<!ENTITY version   "2020.01.16">
+<!ENTITY version   "2020.02.09">
 <!ENTITY launch    "Docker.Categorize">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "Squidly271/docker.categorize">
@@ -12,6 +12,9 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" icon="list-alt">
 
 <CHANGES>
+###2020.02.09
+- Add in Security as a category
+
 ###2020.01.16
 - Add in VPN as a network category
 
@@ -72,7 +75,7 @@ The 'source' file.
 -->
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="upgradepkg --install-new">
 <URL>https://raw.github.com/&github;/master/archive/&name;-&version;.txz</URL>
-<MD5>b41556742227ad77ae9a2e4b54f3d8f1</MD5>
+<MD5>e9d2b91a5f2b1d573990f7ce2d3833ba</MD5>
 </FILE>
 
 <!--
