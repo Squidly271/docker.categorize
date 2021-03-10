@@ -5,6 +5,7 @@ plugin=$(basename ${DIR})
 archive="$(dirname $(dirname ${DIR}))/archive"
 version=$(date +"%Y.%m.%d")$1
 
+chmod 0755 -R .
 mkdir -p $tmpdir
 
 cp --parents -f $(find . -type f ! \( -iname "pkg_build.sh" -o -iname "sftp-config.json"  \) ) $tmpdir/

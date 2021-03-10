@@ -2,7 +2,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "docker.categorize">
 <!ENTITY author    "Andrew Zawadzki">
-<!ENTITY version   "2020.12.25">
+<!ENTITY version   "2021.03.10">
 <!ENTITY launch    "Docker.Categorize">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "Squidly271/docker.categorize">
@@ -12,6 +12,9 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" icon="list-alt">
 
 <CHANGES>
+###2021.03.10
+- Permission Fix
+
 ###2020.02.09
 - Add in Security as a category
 
@@ -75,7 +78,7 @@ The 'source' file.
 -->
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="upgradepkg --install-new">
 <URL>https://raw.github.com/&github;/master/archive/&name;-&version;.txz</URL>
-<MD5>b84338f35424a5ef7f6e5d4cecdd7842</MD5>
+<MD5>69a620a50d184ce1b91fd026450149ae</MD5>
 </FILE>
 
 <!--
