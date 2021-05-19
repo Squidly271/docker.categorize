@@ -54,6 +54,7 @@ parameter = '';
 if ( document.getElementById("backup").checked ) parameter += "Backup: ";
 if (document.getElementById("beta").checked) document.getElementById("Beta").innerHTML="True"; else document.getElementById("Beta").innerHTML="False";
 if (document.getElementById("cloud").checked) parameter += "Cloud: ";
+if (document.getElementById("crypto").checked) parameter += "Crypto: ";
 if (document.getElementById("downloaders").checked) parameter += "Downloaders: ";
 if (document.getElementById("gameservers").checked) parameter += "GameServers: ";
 if (document.getElementById("homeautomation").checked) parameter += "HomeAutomation: ";
@@ -99,6 +100,7 @@ function clearCategory() {
 document.getElementById("backup").checked = false;
 document.getElementById("beta").checked = false;
 document.getElementById("cloud").checked = false;
+document.getElementById("crypto").checked = false;
 document.getElementById("downloaders").checked = false;
 document.getElementById("gameservers").checked = false;
 document.getElementById("homeautomation").checked = false;
@@ -146,6 +148,7 @@ openBox(command,'Docker Categorize',800,800);
 <tr><td><input type=checkbox id="backup" onchange=categorize();>Backup</td></tr>
 <tr><td><input type=checkbox id="beta" onchange=categorize();>Beta</td></tr>
 <tr><td><input type=checkbox id="cloud" onchange=categorize();>Cloud</td></tr>
+<tr><td><input type=checkbox id="crypto" onchange=categorize();>Crypto</td></tr>
 <tr><td><input type=checkbox id="downloaders" onchange=categorize();>Downloaders</td></tr>
 <tr><td><input type=checkbox id='gameservers' onchange=categorize();>GameServers</td></tr>
 <tr><td><input type=checkbox id="homeautomation" onchange=categorize();>Home Automation</td></tr>

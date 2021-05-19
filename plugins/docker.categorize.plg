@@ -2,7 +2,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "docker.categorize">
 <!ENTITY author    "Andrew Zawadzki">
-<!ENTITY version   "2021.03.10">
+<!ENTITY version   "2021.05.19">
 <!ENTITY launch    "Docker.Categorize">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "Squidly271/docker.categorize">
@@ -12,6 +12,9 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" icon="list-alt">
 
 <CHANGES>
+###2021.05.19
+- Add Crypto as a category
+
 ###2021.03.10
 - Permission Fix
 
