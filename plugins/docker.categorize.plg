@@ -2,7 +2,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "docker.categorize">
 <!ENTITY author    "Andrew Zawadzki">
-<!ENTITY version   "2021.05.19">
+<!ENTITY version   "2021.07.25">
 <!ENTITY launch    "Docker.Categorize">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "Squidly271/docker.categorize">
@@ -12,6 +12,9 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" icon="list-alt">
 
 <CHANGES>
+###2021.07.25
+- Remove extraneous file
+
 ###2021.05.19
 - Add Crypto as a category
 
@@ -67,7 +70,6 @@
 ###2015.04.18###
 - Initial Release
 </CHANGES>
-
 <!-- The 'pre-install' script. -->
 <FILE Run="/bin/bash">
 <INLINE>
@@ -81,7 +83,7 @@ The 'source' file.
 -->
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="upgradepkg --install-new">
 <URL>https://raw.github.com/&github;/master/archive/&name;-&version;.txz</URL>
-<MD5>17c28cde934bceb2091111a22e5e45de</MD5>
+<MD5>06b33d3f5b8948b44703b178481bb852</MD5>
 </FILE>
 
 <!--
