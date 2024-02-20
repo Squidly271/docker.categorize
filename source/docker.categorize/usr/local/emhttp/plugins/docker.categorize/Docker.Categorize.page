@@ -51,6 +51,7 @@ function categorize() {
 
 parameter = '';
 
+if ( document.getElementById("ai").checked ) parameter += "AI: ";
 if ( document.getElementById("backup").checked ) parameter += "Backup: ";
 if (document.getElementById("beta").checked) document.getElementById("Beta").innerHTML="True"; else document.getElementById("Beta").innerHTML="False";
 if (document.getElementById("cloud").checked) parameter += "Cloud: ";
@@ -98,6 +99,7 @@ document.getElementById("Date").innerHTML = d;
 }
 
 function clearCategory() {
+document.getElementById("ai").checked = false;
 document.getElementById("backup").checked = false;
 document.getElementById("beta").checked = false;
 document.getElementById("cloud").checked = false;
@@ -147,6 +149,7 @@ openBox(command,'Docker Categorize',800,800);
 <form method="POST" action="/update.htm" target="progressFrame">
 
 <table>
+<tr><td><input type=checkbox id='ai' onchange=categorize();>AI</td></tr>
 <tr><td><input type=checkbox id="backup" onchange=categorize();>Backup</td></tr>
 <tr><td><input type=checkbox id="beta" onchange=categorize();>Beta</td></tr>
 <tr><td><input type=checkbox id="cloud" onchange=categorize();>Cloud</td></tr>
