@@ -2,16 +2,19 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "docker.categorize">
 <!ENTITY author    "Andrew Zawadzki">
-<!ENTITY version   "2024.02.19">
+<!ENTITY version   "2024.12.06">
 <!ENTITY launch    "Docker.Categorize">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
-<!ENTITY github    "Squidly271/docker.categorize">
+<!ENTITY github    "unraid/docker.categorize">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/master/plugins/&name;.plg">
 ]>
 
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" icon="list-alt">
 
 <CHANGES>
+###2024.12.06
+- Change Installation URL
+
 ###2024.02.19
 - Add in AI as a category
 
