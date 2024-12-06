@@ -92,7 +92,7 @@ The 'source' file.
 -->
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="upgradepkg --install-new">
 <URL>https://raw.github.com/&github;/master/archive/&name;-&version;.txz</URL>
-<MD5>e6b99125b3f183066c0cd2786cf4b78c</MD5>
+<MD5>0e528078dbb1924c90200683e554eb43</MD5>
 </FILE>
 
 <!--
